@@ -42,16 +42,16 @@ p{
   	font-size: 1rem;
 }
 
-.logo1{
+.logo{
 	fill:SteelBlue;
 	fill-opacity:25%;
 	width:150px;
 	height:150px;
 }
-.logo1:hover path{
+.logo-link:hover .logo{
 	fill:red;
 }
-.logo1:active path{
+.logo-link:active .logo{
 	fill:lightblue;
 }
 	
