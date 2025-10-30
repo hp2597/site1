@@ -18,17 +18,17 @@ p{
   	font-family:"Fira Sans", sans-serif, serif;
 }
 
-.logo{
+.logo1{
 	fill:SteelBlue;
 	fill-opacity:25%;
 	width:150px;
 	height:150px;
 }
 
-a:hover .logo{
+.logo1:hover path{
 	fill:red;
 }
-a:active .logo{
+.logo1:active path{
 	fill:lightblue;
 }
 
