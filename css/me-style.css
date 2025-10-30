@@ -48,10 +48,10 @@ p{
 	height:150px;
 }
 .logo:hover{
-	background-color:LightCyan;
+	filter:blur(0.1rem);
 }
 .logo:active{
-	filter:invert(83%) sepia(47%) saturate(5862%) hue-rotate(6deg) brightness(108%) contrast(111%);
+	filter:drop-shadow(30px 10px 4px #4444dd);
 }
 	
 #interests{
