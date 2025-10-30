@@ -44,16 +44,16 @@ p{
 
 .logo{
 	fill:SteelBlue;
-	fill-opacity:"0.20";
+	fill-opacity:25%;
 	width:150px;
 	height:150px;
 }
 
 a:hover .logo{
-	fill:#007bff;
+	fill:red;
 }
 a:active .logo{
-	fill:Plum;
+	fill:lightblue;
 }
 	
 #interests{
