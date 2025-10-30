@@ -23,13 +23,12 @@ p{
 	width:150px;
 	height:150px;
 }
-.logo a:hover{
-	background-color:LightCyan;
+.logo:hover{
+	filter:blur(0.1rem);
 }
-.logo a:active{
-	filter:invert(83%) sepia(47%) saturate(5862%) hue-rotate(6deg) brightness(108%) contrast(111%);
+.logo:active{
+	filter:drop-shadow(30px 10px 4px #4444dd);
 }
-
 nav a{
 	color:red;
     padding: 5px;
