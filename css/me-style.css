@@ -48,11 +48,10 @@ p{
 	width:150px;
 	height:150px;
 }
-
-a:hover .logo{
+.logo:hover path{
 	fill:red;
 }
-a:active .logo{
+.logo:active path{
 	fill:lightblue;
 }
 	
