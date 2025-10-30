@@ -47,10 +47,10 @@ p{
 	width:150px;
 	height:150px;
 }
-.logo a:hover{
+.logo:hover{
 	background-color:LightCyan;
 }
-.logo a:active{
+.logo:active{
 	filter:invert(83%) sepia(47%) saturate(5862%) hue-rotate(6deg) brightness(108%) contrast(111%);
 }
 	
