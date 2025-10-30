@@ -39,18 +39,16 @@ p {
   z-index: 1;
 }
 
-.logo1{
-	fill:SteelBlue;
-	fill-opacity:25%;
+.logo{
+	filter: drop-shadow(16px 16px 20px red) invert(75%);
 	width:150px;
 	height:150px;
 }
-
-.logo:hover path{
-	fill:red;
+.logo a:hover{
+	filter:blur(5px);
 }
-.logo:active path{
-	fill:lightblue;
+.logo a:active{
+	filter:invert(83%) sepia(47%) saturate(5862%) hue-rotate(6deg) brightness(108%) contrast(111%);
 }
 
 /* Layout components */
