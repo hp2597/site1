@@ -1,0 +1,79 @@
+/* Reset and base styles */
+body {
+  margin: 0; 
+  min-height: 100vh;
+  background-image: url('HelenParkBackground1920px.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 48px;
+  color: #f15edb;
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), 0 0 15px rgba(241, 94, 219, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  color: #6a1b9a;
+  line-height: 1.6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(106, 27, 154, 0.5);
+  margin: 20px;
+  padding: 10px;
+  border-left: 4px solid #6a1b9a;
+  background: rgba(241, 94, 219, 0.1);
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(5px);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.logo{
+	fill:SteelBlue;
+	fill-opacity:"0.20";
+	width:150px;
+	height:150px;
+}
+
+a:hover .logo{
+	fill:#007bff;
+}
+a:active .logo{
+	fill:Plum;
+}
+
+/* Layout components */
+.content {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.content p {
+  max-width: 40vw;
+}
+
+/* Images and media */
+.headshot-img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  max-height: 90vh;
+  width: auto;
+  object-fit: contain;
+  z-index: 1;
+}

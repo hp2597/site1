@@ -1,0 +1,241 @@
+@font-face {
+	font-family: Oxygen-Regular;
+  	src:url(Oxygen-Regular.ttf);
+  	font-weight: normal;
+  	font-style: normal;
+}
+head{
+	margin: 0 15%;
+}
+body {
+  	background-color: WhiteSmoke;
+  	color: DarkSlateGrey;
+  	font-family: Arial, Helvetica, sans-serif;
+  	margin: 0 15%;
+ 	height: 100vh;  /* set height to full viewport height */
+ 	overflow: auto; /* added to enable scrolling */
+}
+
+main {
+ 	margin: 0 15%;
+ 	padding-top: 2em;
+}
+
+h1 {
+  	font-family: "Times New Roman", sans-serif, serif; 
+  	letter-spacing: 0.2rem;
+  	font-size: 3rem;
+	margin-bottom:0.5%;
+	margin-right:1em;
+	margin-top:0.5%;
+}
+
+h2 {
+	font-family: "Times New Roman", sans-serif, serif; 
+  	font-size: 1.2rem;
+  	text-decoration-thickness: 3px;
+  	text-decoration-color: Orange;  
+}
+
+p{
+  	font-family:"Fira Sans", sans-serif, serif;
+  	font-size: 1rem;
+}
+
+.logo{
+	fill:SteelBlue;
+	fill-opacity:"0.20";
+	width:150px;
+	height:150px;
+}
+
+a:hover .logo{
+	fill:#007bff;
+}
+a:active .logo{
+	fill:Plum;
+}
+	
+#interests{
+	border: red 2px solid;
+	padding: 0.5em 1em;
+	display:inline-block;
+	border-radius: 0.5em;
+}
+
+#travel{
+	border: red 2px solid;
+	padding: 0.5em 1em;
+	display:inline-block;
+	border-radius: 0.5em;
+}
+
+#mainNav {
+  	background-color: #ffffff;
+	border-top: thick double #32a1ce;
+  	border-bottom: thick double #32a1ce;
+	padding-top: 2em;
+	padding-bottom: 2em;
+  	width: 100%;
+}
+
+#mainNav .fa-ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+#mainNav .fa-ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  line-height: 1.5;
+}
+
+#mainNav .fa-ul li a {
+  text-decoration: none;
+  color: LightSeaGreen;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+#mainNav .fa-ul li a:link{
+	color:LightSeaGreen;
+}
+
+#mainNav .fa-ul li a:visited {
+	color:Indigo;
+}
+
+#mainNav .fa-ul li a:hover {
+	color: #007bff;
+}
+
+#mainNav .fa-ul li a:active {
+	text-decoration: underline overline Plum;
+    color:Plum;
+}
+
+#mainNav .fa-li {
+  position: static;
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+#mainNav .fa-li i {
+  font-size: 1.2em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.fa-circle-info{
+	background-color: BlanchedAlmond;
+    border-radius: 0.2em;
+    padding: 0.3em;
+}
+
+.fa-heart{
+	background-color: BlanchedAlmond;
+    border-radius: 0.2em;
+    padding: 0.3em;
+}
+
+.fa-briefcase{
+	background-color: BlanchedAlmond;
+    border-radius: 0.2em;
+    padding: 0.3em;
+}
+
+.fa-house{
+	background-color: BlanchedAlmond;
+	border-radius: 0.2em;
+    padding: 0.3em;
+}
+
+nav a{
+	color:red;
+    padding: 5px;
+    border-radius: 15px 50px;  
+}
+nav a:link {
+    color:rgb(71, 198, 240);
+}
+nav a:visited {
+    color:Indigo;
+}
+nav a:hover{
+	color: #007bff;
+}
+nav a:active {
+    color:Plum;
+}
+
+table {
+  	border-collapse: collapse;
+  	width: 80%;
+  	margin: 1em 0;
+}
+
+th, td {
+  	border: 1px solid #dddddd;
+  	text-align: center;
+  	padding: 8px;
+}
+th {
+  	background-color: LightBlue;
+}
+tbody tr:nth-child(even) {
+  	background-color: #f9f9f9;
+}
+tbody tr:nth-child(odd) {
+  	background-color: #ffffff;
+}	
+
+
+/* Flexbox grid layout for Interests page */
+.two-column {
+	display: flex;
+	flex-wrap: wrap; /* allow columns to wrap like a grid */
+	gap: 2rem;
+	align-items: flex-start;
+	margin-top: 1.5em;
+}
+.two-column .col {
+	box-sizing: border-box;
+	flex: 1 1 300px; /* grow, shrink, preferred width */
+	min-width: 260px;
+}
+/* Preferred column widths on larger screens */
+.col-left {
+	flex-basis: 35%;
+}
+.col-right {
+	flex-basis: 65%;
+}
+
+/* Ensure table fills the right column */
+.col-right table {
+	width: 100%;
+}
+
+/* On very small screens, let items stack naturally */
+@media (max-width: 520px) {
+	.two-column .col {
+		flex-basis: 100%;
+	}
+}
+
+/* Responsive image inside left column */
+.responsive-img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin-top: 0.5em;
+}
