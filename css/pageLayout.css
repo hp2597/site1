@@ -1,7 +1,7 @@
 /* CSS Variables */
 :root {
   --maxw: 1200px;
-  --accent: #007bff;
+  --accent: #ffbb00;
   --muted: #6c757d;
 }
 
@@ -54,7 +54,7 @@ body {
   filter: drop-shadow(10px 10px 4px #4444dd);
 }
 
-/* Skip Link (Accessibility)*/
+/* Skip Link */
 .skipLink {
   position: absolute;
   left: -9999px; 
@@ -74,7 +74,7 @@ body {
 /* Header */
 header {
   border-bottom: 1px solid #29313a;
-  background: #0b0d0f;
+  background: WhiteSmoke;
 }
 
 /* Navigation */
@@ -144,9 +144,7 @@ header {
 }
 
 /* Font Awesome Icon Styles */
-.fa-clock-rotate-left,
-.fa-wrench,
-.fa-house {
+.fa-clock-rotate-left,.fa-wrench,.fa-house {
   background-color: BlanchedAlmond;
   border-radius: 0.2em;
   padding: 0.3em;
@@ -226,7 +224,7 @@ h2 {
 
 .card {
   flex: 1 1 260px;
-  background: #0b0d0f;
+  background: WhiteSmoke;
   border: 1px solid #29313a; 
   border-radius: 0.75rem; 
   padding: 1rem;
