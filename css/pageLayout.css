@@ -7,7 +7,7 @@
 
 /*Font Face*/
 @font-face {
-  font-family: 'myFont';
+  font-family:'myFont';
   src: url('LeagueMono-Regular.ttf')format('ttf');
 }
 
