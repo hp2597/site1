@@ -54,23 +54,6 @@ body {
   filter: drop-shadow(10px 10px 4px #4444dd);
 }
 
-/* Skip Link */
-.skipLink {
-  position: absolute;
-  left: -9999px; 
-  top: auto;
-}
-
-.skipLink:focus {
-  left: 1rem;
-  top: 1rem;
-  background: #fff;
-  color: #000;
-  padding: 0.5rem 0.75rem; 
-  border-radius: 0.5rem; 
-  z-index: 999;
-}
-
 /* Header */
 header {
   border-bottom: 1px solid ##002636;
@@ -147,6 +130,13 @@ header {
 .fa-clock-rotate-left,.fa-wrench,.fa-house {
   background-color: BlanchedAlmond;
   padding: 0.2em;
+}
+
+#skipLink{
+	border: red 2px solid;
+	padding: 0.5em 1em;
+	display:inline-block;
+	border-radius: 0.5em;
 }
 
 /* Hero Section */
