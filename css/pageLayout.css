@@ -42,8 +42,6 @@ body {
 /* Logo */
 .logo {
   filter: drop-shadow(16px 16px 20px red) invert(75%);
-  width:100px;
-  height:100px;
 }
 
 .logo:hover {
