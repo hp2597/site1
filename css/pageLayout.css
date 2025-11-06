@@ -7,10 +7,8 @@
 
 /*Font Face*/
 @font-face {
-  font-family: "myFont";
-  src: url("LeagueMono-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'myFont';
+  src: url('LeagueMono-Regular.ttf')format('ttf');
 }
 
 /* Base Styles */
@@ -21,7 +19,7 @@
 body {
   background-color: WhiteSmoke;
   color: DarkSlateGrey;
-  font-family: "myFont", Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0 15%;
   height: 100vh;
   overflow: auto;
@@ -189,7 +187,8 @@ article, aside {
 
 /* Typography */
 h1, h2, h3 { 
-  line-height: 1.2; 
+	font-family: myFont, Helvetica, sans-serif;
+  	line-height: 1.2; 
 }
 
 h1 { 
