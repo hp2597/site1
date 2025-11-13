@@ -95,21 +95,20 @@ header {
 }
 
 #mainNav .fa-ul li {
-  display: flex;
-  align-items: center;
-  line-height: 1.5;
+  display: block;
   width: 100%;
-  overflow: hidden;
 }
 
 #mainNav .fa-ul li a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: LightSeaGreen;
   font-weight: 500;
   transition: color 0.3s ease;
+  padding: 0.5rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  flex: 1;
 }
 
 #mainNav .fa-ul li a:link {
@@ -130,8 +129,7 @@ header {
 }
 
 #mainNav .fa-li {
-  position: relative;
-  margin-right: 8px;
+  margin-right: 0.5rem;
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
@@ -139,7 +137,7 @@ header {
 
 #mainNav .fa-li i {
   font-size: 1.2em;
-  display: inline-block;
+  display: block;
 }
 
 /* Font Awesome Icon Styles */
