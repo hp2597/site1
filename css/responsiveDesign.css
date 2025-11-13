@@ -1,0 +1,247 @@
+/* CSS Variables */
+:root {
+  --maxw: 1200px;
+  --accent: #3e8fff;
+  --muted: #6c757d;
+}
+
+/*Font Face*/
+@font-face {
+  font-family:'myFont';
+  src: url('LeagueMono-Regular.ttf')format('ttf');
+}
+
+/* Base Styles */
+* { 
+  box-sizing: border-box; 
+}
+
+body {
+  background-color: WhiteSmoke;
+  color: DarkSlateGrey;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 15%;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* Page Wrapper */
+.page {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, var(--maxw)) 1fr;
+  min-height: 100vh;
+}
+
+.wrap { 
+  grid-column: 2; 
+  padding: 1rem; 
+}
+
+/* Logo */
+.logo {
+  filter: drop-shadow(16px 16px 20px red) invert(75%);
+}
+
+.logo:hover {
+  filter: blur(0.1rem);
+}
+
+.logo:active {
+  filter: drop-shadow(10px 10px 4px #4444dd);
+}
+
+/* Header */
+header {
+  border-bottom: 1px solid #002636;
+}
+
+/* Navigation */
+#mainNav {
+  background-color: #ffffff;
+  border-top: thick double #32a1ce;
+  border-bottom: thick double #32a1ce;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  width: 100%;
+}
+
+#mainNav .fa-ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+#mainNav .fa-ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  line-height: 1.5;
+}
+
+#mainNav .fa-ul li a {
+  text-decoration: none;
+  color: LightSeaGreen;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+#mainNav .fa-ul li a:link {
+  color: LightSeaGreen;
+}
+
+#mainNav .fa-ul li a:visited {
+  color: Indigo;
+}
+
+#mainNav .fa-ul li a:hover {
+  color: #007bff;
+}
+
+#mainNav .fa-ul li a:active {
+  text-decoration: underline overline Plum;
+  color: Plum;
+}
+
+#mainNav .fa-li {
+  position: static;
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+#mainNav .fa-li i {
+  font-size: 1.2em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Font Awesome Icon Styles */
+.fa-clock-rotate-left,.fa-wrench,.fa-house {
+  background-color: BlanchedAlmond;
+  padding: 0.2em;
+}
+
+#skipLink{
+	border: red 2px solid;
+	padding: 0.5em 1em;
+	display:inline-block;
+	border-radius: 0.5em;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;    
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hero figure, .hero .lede { 
+  background: #D2E3FC; 
+  border: 1px solid #658abf; 
+  border-radius: 0.75rem; 
+  overflow: clip; 
+}
+
+.hero img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block; 
+}
+
+.hero .lede { 
+  padding: 1rem 1.25rem; 
+}
+
+/* Intro Section */
+.intro {
+  background: #D2E3FC; 
+  border: 1px solid #658abf; 
+  border-radius: 0.75rem; 
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Main Grid Layout */
+.maingrid {
+  display: grid;       
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+article, aside {
+  background: #D2E3FC; 
+  border: 1px solid #658abf; 
+  border-radius: 0.75rem; 
+  padding: 1.25rem;
+}
+
+/* Typography */
+h1, h2, h3 { 
+	font-family: myFont, Helvetica, sans-serif;
+  	line-height: 1.2; 
+}
+
+h1 { 
+  font-size: clamp(1.8rem, 3vw, 2.4rem); 
+  margin: 0.25rem 0 0.5rem; 
+}
+
+h2 { 
+  color: var(--accent); 
+  margin-top: 1.25rem; 
+}
+
+/* Cards */
+.cards {
+  display: flex;  
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 260px;
+  background: WhiteSmoke;
+  border: 1px solid #002636; 
+  border-radius: 0.75rem; 
+  padding: 1rem;
+}
+
+/* Figures */
+figure { 
+  margin: 0; 
+}
+
+figcaption { 
+  font-size: 0.9rem; 
+  color: var(--muted); 
+  padding: 0.5rem 1rem 1rem; 
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #29313a; 
+  color: var(--muted); 
+  font-size: 0.95rem; 
+  padding: 1.25rem 0; 
+  margin-top: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .hero { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .maingrid { 
+    grid-template-columns: 1fr; 
+  }
+}
