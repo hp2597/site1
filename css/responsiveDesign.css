@@ -154,15 +154,19 @@ body {
 }
 
 .hero .castle-section {
-  position: relative;
-  width: 100%;
+  background: var(--bg-secondary); 
+  border: 0.5em solid var(--border-color); 
+  border-radius: 0.75rem; 
+  overflow: clip;
+  padding: 1rem 1.25rem; 
 }
 
 .hero .lede { 
   background: var(--bg-secondary); 
   border: 0.5em solid var(--border-color); 
   border-radius: 0.75rem; 
-  overflow: clip; 
+  overflow: clip;
+  padding: 1rem 1.25rem; 
 }
 
 .hero img { 
@@ -170,10 +174,6 @@ body {
   height: auto;
   object-fit: cover; 
   display: block; 
-}
-
-.hero .lede { 
-  padding: 1rem 1.25rem; 
 }
 
 /* Intro Section */
@@ -203,7 +203,7 @@ article, aside {
 /* Typography */
 h1, h2, h3 { 
   font-family: myFont, Helvetica, sans-serif;
-  line-height: 1.2; 
+  line-height: 1em; 
 }
 
 h1 { 
