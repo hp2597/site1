@@ -138,12 +138,8 @@ header {
 }
 
 #mainNav .fa-li i {
-  font-size: 1em;
-  width: 1.5em;
-  height: 1.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.2em;
+  display: inline-block;
 }
 
 /* Font Awesome Icon Styles */
