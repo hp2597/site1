@@ -241,17 +241,6 @@ img {
   height: auto;
 }
 
-/* Figures */
-figure { 
-  margin: 0; 
-}
-
-figcaption { 
-  font-size: 0.9rem; 
-  color: var(--muted); 
-  padding: 0.5rem 1rem 1rem; 
-}
-
 /* Footer */
 footer {
   border-top: 1px solid var(--border-color); 
@@ -261,7 +250,7 @@ footer {
   margin-top: 1.5rem;
 }
 
-/* ========== MEDIA QUERIES ========== */
+/* MEDIA QUERIES*/
 
 /* Tablet Layout (600px and up) */
 @media (min-width: 600px) {
