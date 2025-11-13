@@ -96,22 +96,17 @@ header {
 }
 
 #mainNav .fa-ul li {
-  display: block;
-  width: 100%;
-  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 #mainNav .fa-ul li a {
   display: flex;
   align-items: center;
-  justify-content: center;
   text-decoration: none;
   color: LightSeaGreen;
-  font-weight: 500;
   transition: color 0.3s ease;
   padding: 0.5rem;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 #mainNav .fa-ul li a:link {
@@ -132,10 +127,7 @@ header {
 }
 
 #mainNav .fa-li {
-  margin-right: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
+  margin-right: 0.5em;
 }
 
 #mainNav .fa-li i {
@@ -146,7 +138,7 @@ header {
 /* Font Awesome Icon Styles */
 .fa-clock-rotate-left, .fa-wrench, .fa-house {
   background-color: BlanchedAlmond;
-  padding: 0.3em;
+  padding: 0.3em 0.1em 0.3em;
   border-radius: 0.25em;
   box-sizing: border-box;
 }
