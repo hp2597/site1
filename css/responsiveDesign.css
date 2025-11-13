@@ -153,6 +153,11 @@ body {
   margin-top: 1rem;
 }
 
+.hero .castle-section {
+  position: relative;
+  width: 100%;
+}
+
 .hero .lede { 
   background: var(--bg-secondary); 
   border: 0.5em solid var(--border-color); 
