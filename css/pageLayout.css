@@ -79,7 +79,7 @@ header {
   background-color: var(--bg-secondary);
   border-top: 3px double #32a1ce;
   border-bottom: 3px double #32a1ce;
-  padding: 0.75em;
+  padding: 1em;
   width: 100%;
   overflow-x: hidden;
 }
@@ -87,21 +87,24 @@ header {
 #mainNav .fa-ul {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
+  align-items: center;
 }
 
 #mainNav .fa-ul li {
   display: block;
   width: 100%;
+  text-align: center;
 }
 
 #mainNav .fa-ul li a {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: LightSeaGreen;
   font-weight: 500;
@@ -109,7 +112,6 @@ header {
   padding: 0.5rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-size: 0.95rem;
 }
 
 #mainNav .fa-ul li a:link {
@@ -134,18 +136,17 @@ header {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-  min-width: 24px;
 }
 
 #mainNav .fa-li i {
-  font-size: 1em;
+  font-size: 1.2em;
   display: block;
 }
 
 /* Font Awesome Icon Styles */
 .fa-clock-rotate-left, .fa-wrench, .fa-house {
   background-color: BlanchedAlmond;
-  padding: 0.25em;
+  padding: 0.3em;
   border-radius: 0.25em;
   box-sizing: border-box;
 }
@@ -269,6 +270,10 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+  }
+
+  #mainNav .fa-ul li {
+    width: auto;
   }
 
   .cards {
