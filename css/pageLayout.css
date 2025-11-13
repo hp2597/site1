@@ -56,7 +56,7 @@ body {
 
 /* Logo */
 .logo {
-  filter: drop-shadow(8px 8px 10px red) invert(75%);
+  filter: invert(75%);
   max-width: 100%;
   height: auto;
 }
@@ -66,19 +66,19 @@ body {
 }
 
 .logo:active {
-  filter: drop-shadow(5px 5px 4px #4444dd);
+  filter: drop-shadow(0.3rem 0.3rem 0.4rem #4444dd);
 }
 
 /* Header */
 header {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 0.1rem solid var(--border-color);
 }
 
 /* Navigation - Mobile First */
 #mainNav {
   background-color: var(--bg-secondary);
-  border-top: 3px double #32a1ce;
-  border-bottom: 3px double #32a1ce;
+  border-top: 0.3rem double #32a1ce;
+  border-bottom: 0.3rem double #32a1ce;
   padding: 1em;
   width: 100%;
   overflow-x: hidden;
@@ -144,7 +144,7 @@ header {
 }
 
 #skipLink {
-  border: red 2px solid;
+  border: red 2rem solid;
   padding: 0.5em 1em;
   display: inline-block;
   border-radius: 0.5em;
@@ -158,9 +158,9 @@ header {
   margin-top: 1rem;
 }
 
-.hero figure, .hero .lede { 
+.hero .lede { 
   background: var(--bg-secondary); 
-  border: 1px solid var(--border-color); 
+  border: 0.5em solid var(--border-color); 
   border-radius: 0.75rem; 
   overflow: clip; 
 }
@@ -179,7 +179,7 @@ header {
 /* Intro Section */
 .intro {
   background: var(--bg-secondary); 
-  border: 1px solid var(--border-color); 
+  border: 0.5em solid var(--border-color); 
   border-radius: 0.75rem; 
   padding: 1.25rem;
   margin-bottom: 1rem;
@@ -195,7 +195,7 @@ header {
 
 article, aside {
   background: var(--bg-secondary); 
-  border: 1px solid var(--border-color); 
+  border: 0.5em solid var(--border-color); 
   border-radius: 0.75rem; 
   padding: 1.25rem;
 }
@@ -225,7 +225,7 @@ h2 {
 
 .card {
   background: var(--bg-primary);
-  border: 1px solid var(--border-color); 
+  border: 0.1em solid var(--border-color); 
   border-radius: 0.75rem; 
   padding: 1rem;
 }
@@ -238,7 +238,7 @@ img {
 
 /* Footer */
 footer {
-  border-top: 1px solid var(--border-color); 
+  border-top: 1rem solid var(--border-color); 
   color: var(--muted); 
   font-size: 0.95rem; 
   padding: 1.25rem 1rem; 
