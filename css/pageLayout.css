@@ -37,7 +37,9 @@ body {
   color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  padding: 0;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Page Wrapper - Mobile First */
@@ -79,6 +81,7 @@ header {
   border-bottom: 3px double #32a1ce;
   padding: 1em;
   width: 100%;
+  overflow-x: hidden;
 }
 
 #mainNav .fa-ul {
@@ -88,12 +91,15 @@ header {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 #mainNav .fa-ul li {
   display: flex;
   align-items: center;
   line-height: 1.5;
+  width: 100%;
+  overflow: hidden;
 }
 
 #mainNav .fa-ul li a {
@@ -101,6 +107,9 @@ header {
   color: LightSeaGreen;
   font-weight: 500;
   transition: color 0.3s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex: 1;
 }
 
 #mainNav .fa-ul li a:link {
@@ -121,19 +130,28 @@ header {
 }
 
 #mainNav .fa-li {
+  position: relative;
   margin-right: 8px;
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 #mainNav .fa-li i {
-  font-size: 1.2em;
+  font-size: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Font Awesome Icon Styles */
 .fa-clock-rotate-left, .fa-wrench, .fa-house {
   background-color: BlanchedAlmond;
-  padding: 0.2em;
+  padding: 0.3em;
+  border-radius: 0.25em;
+  box-sizing: border-box;
 }
 
 #skipLink {
