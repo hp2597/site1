@@ -69,11 +69,6 @@ body {
   filter: drop-shadow(0.3rem 0.3rem 0.4rem #4444dd);
 }
 
-/* Header */
-header {
-  border-bottom: 0.1rem solid var(--border-color);
-}
-
 /* Navigation - Mobile First */
 #mainNav {
   background-color: var(--bg-secondary);
