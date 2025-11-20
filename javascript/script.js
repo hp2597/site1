@@ -10,6 +10,9 @@ const bodyElement = document.querySelector('body');
 // DOM Query 4: Select footer for interactivity
 const footer = document.querySelector('footer');
 
+// DOM Query 5: Select navigation for mobile menu
+const mainNav = document.querySelector('#mainNav');
+
 function updateFooterText() {
     const currentYear = new Date().getFullYear();
     const pageName = document.title.split('—')[1]?.trim() || 'Buda Castle';
@@ -68,8 +71,57 @@ function toggleTheme() {
     }
 }
 
-// Using JavaScript Date object with 7 variations
+// EXTRA CREDIT: Mobile Navigation Toggle Function
+function toggleMobileMenu() {
+    mainNav.classList.toggle('nav-open');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (mainNav.classList.contains('nav-open')) {
+        menuBtn.setAttribute('aria-expanded', 'true');
+        console.log('📱 Mobile menu opened');
+    } else {
+        menuBtn.setAttribute('aria-expanded', 'false');
+        console.log('📱 Mobile menu closed');
+    }
+}
 
+// Create custom SVG hamburger icon button
+function createMobileMenuButton() {
+    // Check if button already exists
+    if (document.querySelector('.mobile-menu-btn')) {
+        return;
+    }
+    
+    const menuButton = document.createElement('button');
+    menuButton.className = 'mobile-menu-btn';
+    menuButton.setAttribute('aria-label', 'Toggle navigation menu');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-controls', 'mainNav');
+    
+    // Custom SVG icon (hamburger menu)
+    menuButton.innerHTML = `
+        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M 3 7 L 27 7 L 27 9 L 3 9 Z" fill="currentColor"/>
+            <path d="M 3 14 L 27 14 L 27 16 L 3 16 Z" fill="currentColor"/>
+            <path d="M 3 21 L 27 21 L 27 23 L 3 23 Z" fill="currentColor"/>
+        </svg>
+    `;
+    
+    // Add click event listener
+    menuButton.addEventListener('click', toggleMobileMenu);
+    
+    // Insert button before the nav menu
+    const menuHeading = header.querySelector('h2');
+    if (menuHeading) {
+        menuHeading.insertAdjacentElement('afterend', menuButton);
+    } else {
+        mainNav.insertAdjacentElement('beforebegin', menuButton);
+    }
+    
+    console.log('✓ Mobile menu button created');
+}
+
+// Using JavaScript Date object with 7 variations
 function applyDayOfWeekStyling() {
     const today = new Date();
     const dayOfWeek = today.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
@@ -174,11 +226,21 @@ function initializeKeyboardShortcuts() {
                 toggleTheme();
             }
         }
+        
+        // Press 'M' to toggle mobile menu
+        if (e.key === 'm' || e.key === 'M') {
+            if (document.activeElement.tagName !== 'INPUT' && 
+                document.activeElement.tagName !== 'TEXTAREA') {
+                const menuBtn = document.querySelector('.mobile-menu-btn');
+                if (menuBtn && window.getComputedStyle(menuBtn).display !== 'none') {
+                    toggleMobileMenu();
+                }
+            }
+        }
     });
 }
 
 // EVENT LISTENERS - Connect functions to events
-
 function initializeEventListeners() {
     console.log('🔧 Initializing event listeners...');
     
@@ -213,8 +275,6 @@ function initializeEventListeners() {
 }
 
 // INITIALIZE ON PAGE LOAD
-
-// Wait for DOM to be fully loaded before running scripts
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🏰 Buda Castle Website - JavaScript Loaded Successfully');
     console.log('================================================');
@@ -224,6 +284,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize all event listeners (Requirement 2)
     initializeEventListeners();
+    
+    // EXTRA CREDIT: Create mobile menu button
+    createMobileMenuButton();
     
     // Log current date and day for debugging
     const today = new Date();
@@ -237,5 +300,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('   - Click the footer');
     console.log('   - Hover over the header');
     console.log('   - Double-click the main heading (or press T)');
+    console.log('   - Click the hamburger menu on mobile (or press M)');
     console.log('================================================');
 });
