@@ -493,6 +493,114 @@ body.dark-mode img:hover {
     top: 1em;
 }
 
+/* Mobile menu button - hidden by default on larger screens */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: 2px solid currentColor;
+    color: inherit;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+    margin: 0.5rem 0;
+}
+
+.mobile-menu-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.mobile-menu-btn:active {
+    transform: scale(0.95);
+}
+
+.mobile-menu-btn svg {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate icon when menu is open */
+.nav-open + .mobile-menu-btn svg,
+.mobile-menu-btn[aria-expanded="true"] svg {
+    transform: rotate(90deg);
+}
+
+/* Mobile styles (screens smaller than 768px) */
+@media (max-width: 767px) {
+    /* Show the hamburger button on mobile */
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    /* Hide the navigation by default on mobile */
+    #mainNav {
+        display: none;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    /* Show navigation when toggled open */
+    #mainNav.nav-open {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    /* Stack navigation items vertically on mobile */
+    #mainNav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    #mainNav li {
+        width: 100%;
+    }
+    
+    #mainNav a {
+        display: block;
+        padding: 0.75rem 1rem;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 0.25rem;
+        transition: background-color 0.2s ease;
+    }
+    
+    #mainNav a:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Slide down animation */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Tablet and larger screens (768px and up) */
+@media (min-width: 768px) {
+    /* Hide the hamburger button on larger screens */
+    .mobile-menu-btn {
+        display: none !important;
+    }
+    
+    /* Always show navigation on larger screens */
+    #mainNav {
+        display: block !important;
+    }
+    
+    /* Horizontal layout for larger screens */
+    #mainNav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
 /* Responsive adjustments for day banner */
 @media (min-width: 600px) {
     #day-banner {
